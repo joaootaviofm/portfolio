@@ -11,7 +11,7 @@ function Navbar() {
         <ul className="hidden md:flex text-white gap-10 font-semibold">
           {navList.map((item, index) => (
             <li key={index}>
-              <button className="cursor-pointer border-b-[3px] border-transparent hover:border-white duration-500">
+              <button className="cursor-pointer border-b-[1px] border-transparent hover:border-white duration-500">
                 {item}
               </button>
             </li>
