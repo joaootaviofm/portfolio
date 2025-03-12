@@ -4,7 +4,7 @@ function Navbar() {
   const navList = ["Sobre", "Home", "Projetos"];
 
   return (
-      <nav className="flex justify-between items-center px-20 py-7">
+      <nav className="z-[1] w-screen flex justify-between items-center px-20 py-7">
         <div className="hover:scale-110 duration-500 cursor-default">
           <img src={Logo} width={96} height={40} alt="Joao Otávio Logo" />
         </div>
