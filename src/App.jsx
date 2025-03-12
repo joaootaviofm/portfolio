@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import About from "./components/About";
 import pattern from "./assets/background-pattern.svg";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       </div>
       <Navbar />
       <Hero />
+      <About />
     </div>
   );
 }

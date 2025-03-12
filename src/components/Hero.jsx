@@ -26,7 +26,7 @@ function Hero() {
           de problemas e evolução constante.
         </p>
         <div className="mt-10">
-          <button className="hover:bg-white hover:text-black duration-500 ease-in-out cursor-pointer bg-black px-10 py-4 rounded-full border border-[#585858] font-medium text-white ">
+          <button className="hover:bg-white hover:text-black hover:border-black duration-500 ease-in-out cursor-pointer bg-black px-10 py-4 rounded-full border border-[#585858] font-medium text-white ">
             Entre em contato
           </button>
         </div>
