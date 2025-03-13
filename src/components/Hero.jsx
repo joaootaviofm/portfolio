@@ -2,14 +2,14 @@ import me from "../assets/me.webp";
 
 function Hero() {
   return (
-    <div className="z-10 flex flex-col items-center justify-center text-white mt-[120px]">
-      <div className="relative bg-[#1A1A1A] w-[231px] h-[231px] rounded-full overflow-hidden mb-[15px]">
+    <div className="flex flex-col items-center justify-center text-white mt-[120px]">
+      <div className="overflow-hidden relative border border-white/20 bg-[#1A1A1A] w-[231px] h-[231px] rounded-full mb-[15px]">
         <img
           src={me}
           width={231}
           height={231}
           alt="me with a macbook"
-          className="absolute"
+          className="absolute top-5"
         />
       </div>
       <div className="z-10 flex flex-col items-center">
@@ -26,7 +26,7 @@ function Hero() {
           de problemas e evolução constante.
         </p>
         <div className="mt-10">
-          <button className="hover:bg-white hover:text-black duration-500 ease-in-out cursor-pointer bg-black px-10 py-4 rounded-full border border-[#585858] font-medium text-white ">
+          <button className="hover:bg-white hover:text-black duration-700 ease-in-out cursor-pointer bg-black px-10 py-4 rounded-full border border-[#585858] font-medium text-white ">
             Entre em contato
           </button>
         </div>
