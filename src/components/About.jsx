@@ -9,7 +9,7 @@ function About() {
           </span>
         </p>
         <div className="mt-5 flex flex-col gap-5 text-center justify-center items-center text-white text-[17px] font-medium">
-            <p className="max-w-[700px]">Meu nome é João Otávio, tenho 20 anos e sou desenvolvedor com habilidades em <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#9C83FF] to-[#FF9051] ">Javascript, HTML, CSS, React, NextJS, Tailwind, Java</span> e versionamento com <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#9C83FF] to-[#FF9051] ">Git e Github</span></p>
+            <p className="max-w-[700px]">Meu nome é João Otávio, tenho 20 anos e sou desenvolvedor com habilidades em Javascript, HTML, CSS, React, NextJS, Tailwind, Java e versionamento com Git e Github</p>
             <p className="max-w-[700px]">Tenho como objetivo entregar resultados, resolver problemas e ajudar no dia-a-dia com qualquer coisa que for necessária. Entretanto, também procuro aprender e evoluir dia após dia, em busca de me tornar um desenvolvedor fora da curva.</p>
         </div>
       </div>
