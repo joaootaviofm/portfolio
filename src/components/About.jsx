@@ -1,6 +1,6 @@
 function About() {
   return (
-    <div className="font-inter mt-[120px] z-10 relative pb-7">
+    <div className="font-inter mt-[150px] z-10 relative pb-7">
       <div className="z-10 flex flex-col items-center justify-center">
         <h1 className="font-extrabold text-white text-[45px]">SOBRE MIM</h1>
         <p>
