@@ -4,8 +4,8 @@ function Navbar() {
   const navList = ["Sobre", "Home", "Projetos"];
 
   return (
-      <nav className="z-10 w-screen flex justify-between items-center px-20 py-7">
-        <div className="hover:scale-110 duration-500 cursor-default">
+      <nav className="relative w-screen flex justify-between items-center px-20 py-7">
+        <div className="z-10 hover:scale-110 duration-500 cursor-default">
           <img src={Logo} width={96} height={40} alt="Joao Otávio Logo" />
         </div>
         <ul className="z-10 hidden md:flex text-white gap-10 font-semibold">
