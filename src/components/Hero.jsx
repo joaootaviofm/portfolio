@@ -3,13 +3,13 @@ import me from "../assets/me.webp";
 function Hero() {
   return (
     <div className="z-[2] flex flex-col items-center justify-center text-white mt-[120px]">
-      <div className="relative bg-[#1A1A1A] w-[231px] h-[231px] rounded-full overflow-hidden mb-[15px]">
+      <div className="relative bg-[#1A1A1A] w-[231px] h-[231px] rounded-full border border-white/20 overflow-hidden mb-[15px]">
         <img
           src={me}
           width={231}
           height={231}
           alt="me with a macbook"
-          className="absolute"
+          className="absolute top-5"
         />
       </div>
       <div className="z-[1] flex flex-col items-center">
