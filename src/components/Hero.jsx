@@ -9,7 +9,7 @@ function Hero() {
           width={231}
           height={231}
           alt="me with a macbook"
-          className="absolute top-5"
+          className="hover:scale-110 duration-300 absolute top-5"
         />
       </div>
       <div className="z-10 flex flex-col items-center">
