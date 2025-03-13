@@ -1,10 +1,15 @@
 import me from "../assets/me.webp";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "motion/react";
 
 function Hero() {
   return (
     <div className="flex flex-col items-center justify-center text-white mt-[120px]">
       <div className="overflow-hidden relative border border-white/20 bg-[#1A1A1A] w-[231px] h-[231px] rounded-full mb-[15px]">
-        <img
+        <motion.img
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           src={me}
           width={231}
           height={231}
@@ -13,22 +18,44 @@ function Hero() {
         />
       </div>
       <div className="z-10 flex flex-col items-center">
-        <h1 className="font-bold text-[63px] mb-[-15px]">João Otávio</h1>
-        <p className="text-[26px] font-semibold text-[#C9C9C9]">
+        <motion.h1
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0 }}
+          className="font-bold text-[63px] mb-[-15px]"
+        >
+          João Otávio
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="text-[26px] font-semibold text-[#C9C9C9]"
+        >
           Desenvolvedor{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
             Fullstack
           </span>
-        </p>
-        <p className="text-[16px] text-center max-w-[1000px] mt-[20px] text-[#E1E1E1] font-medium">
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          className="text-[16px] text-center max-w-[1000px] mt-[20px] text-[#E1E1E1] font-medium"
+        >
           Desenvolvedor com habilidades em JavaScript, HTML, CSS, React,
           Next.js, Tailwind, Java e Git/GitHub. Focado em resultados, resolução
           de problemas e evolução constante.
-        </p>
+        </motion.p>
         <div className="mt-10">
-          <button className="hover:bg-white hover:text-black duration-700 ease-in-out cursor-pointer bg-black px-10 py-4 rounded-full border border-[#585858] font-medium text-white ">
+          <motion.button
+            initial={{ opacity: 0, x: -150 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            className="hover:bg-white hover:text-black duration-700 ease-in-out cursor-pointer bg-black px-10 py-4 rounded-full border border-[#585858] font-medium text-white "
+          >
             Entre em contato
-          </button>
+          </motion.button>
         </div>
       </div>
     </div>
