@@ -11,7 +11,7 @@ function Navbar() {
         <ul className="z-10 hidden md:flex text-white gap-10 font-semibold">
           {navList.map((item, index) => (
             <li key={index}>
-              <button className="cursor-pointer border-b-[1px] border-transparent hover:border-white duration-500">
+              <button className="hover:text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051] cursor-pointer border-b-[1px] border-transparent hover:border-white duration-500">
                 {item}
               </button>
             </li>
