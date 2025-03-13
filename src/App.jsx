@@ -5,7 +5,7 @@ import pattern from "./assets/background-pattern.svg";
 
 function App() {
   return (
-    <div className="relative font-poppins bg-black overflow-x-hidden">
+    <div className=" min-h-screen relative font-poppins bg-black overflow-x-hidden">
       <div
         className="opacity-40 absolute inset-0 bg-cover"
         style={{ backgroundImage: `url(${pattern})` }}
