@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Technologies from "./components/Technologies";
 import pattern from "./assets/background-pattern.svg";
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Technologies />
+      
     </div>
   );
 }
