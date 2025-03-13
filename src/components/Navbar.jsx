@@ -4,11 +4,11 @@ function Navbar() {
   const navList = ["Sobre", "Home", "Projetos"];
 
   return (
-      <nav className="z-[1] w-screen flex justify-between items-center px-20 py-7">
+      <nav className="z-10 w-screen flex justify-between items-center px-20 py-7">
         <div className="hover:scale-110 duration-500 cursor-default">
           <img src={Logo} width={96} height={40} alt="Joao Otávio Logo" />
         </div>
-        <ul className="hidden md:flex text-white gap-10 font-semibold">
+        <ul className="z-10 hidden md:flex text-white gap-10 font-semibold">
           {navList.map((item, index) => (
             <li key={index}>
               <button className="cursor-pointer border-b-[1px] border-transparent hover:border-white duration-500">
