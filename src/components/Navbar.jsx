@@ -34,7 +34,7 @@ function Navbar() {
               to={item == "Sobre" ? "about" : item == "Home" ? "hero" : item == "Projetos" ? "projects" : item == "Tecnologias" ? "technologies" : ""}
               smooth={true}
               duration={700}
-              offset={item == "Sobre" ? -300 : item == "Home" ? -300 : null}
+              offset={item == "Sobre" ? -300 : item == "Home" ? -300 : item == "Tecnologias" ? -500 : null}
               >{item}</Link>
             </motion.button>
           </li>
