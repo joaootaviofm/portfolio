@@ -4,6 +4,7 @@ import About from "./components/About";
 import Technologies from "./components/Technologies";
 import pattern from "./assets/background-pattern.svg";
 import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <About />
       <Technologies />
       <Projects />
+      <Footer />
       
     </div>
   );
