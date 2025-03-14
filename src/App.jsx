@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Technologies from "./components/Technologies";
 import pattern from "./assets/background-pattern.svg";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <About />
       <Technologies />
+      <Projects />
       
     </div>
   );
