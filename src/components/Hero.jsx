@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 function Hero() {
   return (
-    <div id='hero' className="flex flex-col items-center justify-center text-white mt-[120px]">
+    <div id='hero' className="flex flex-col items-center justify-center text-white mt-[150px]">
       <div className="overflow-hidden relative border border-white/20 bg-[#1A1A1A] w-[231px] h-[231px] rounded-full mb-[15px]">
         <motion.img
           initial={{ opacity: 0, y: 200 }}
