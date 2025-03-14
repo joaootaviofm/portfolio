@@ -1,32 +1,68 @@
-import passwordGen from "../assets/passwordgenerator.png";
+// import passwordGen from "../assets/passwordgenerator.png";
 import soon from "../assets/soon.png";
 
 export default function Projects() {
   const projects = [
     {
-      imgsrc: passwordGen,
-      projectName: "Password generator",
-      description:
-        "a simple and efficient application to create secure passwords according to user preferences.",
+      imgsrc: soon,
+      projectName: "Soon",
+      description: "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
+      link: "#",
     },
     {
       imgsrc: soon,
       projectName: "Soon",
-      description: "Coming soon",
+      description: "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
+      link: "#",
+    },
+    {
+      imgsrc: soon,
+      projectName: "Soon",
+      description: "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
+      link: "#",
+    },
+    {
+      imgsrc: soon,
+      projectName: "Soon",
+      description: "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
+      link: "#",
     },
   ];
 
   return (
-    <div className="relative z-10 mt-[120px]">
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="font-extrabold text-white text-[45px]">PROJETOS</h1>
-        <p>
-          <span className="tracking-[5px] text-[12px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
-            MEUS PROJETOS
-          </span>
-        </p>
+    <div
+      id="projects"
+      className="mt-[150px] font-inter relative z-10 text-white flex flex-col justify-center items-center"
+    >
+      <h1 className="text-[45px] font-extrabold">PROJETOS</h1>
+      <p>
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
+          MEUS PROJETOS
+        </span>
+      </p>
+      <div className="mt-[30px] grid lg:grid-cols-2 grid-cols-1 gap-y-5 gap-x-10">
+        {projects.map((project, index) => (
+          <div key={index} className="flex items-center gap-4">
+            <div>
+              <img
+              className="rounded-md"
+               width={150} height={150} src={project.imgsrc} alt="" />
+            </div>
+            <div className="flex-col justify-center">
+              <h1 className="font-extrabold text-[20px]">{project.projectName}</h1>
+              <p className="text-justify max-w-[250px] font-medium text-[12px] text-[#878787]">{project.description}</p>
+              <div className="flex gap-5 mt-[20px]">
+                <a 
+                className="text-[16px] bg-white text-black hover:bg-black hover:text-white transition-all duration-300 border border-transparent hover:border-white px-2 py-1 rounded-[8px]"
+                href="#">Ver código</a>
+                <a 
+                className="text-[16px] bg-black text-white border-white/20 hover:bg-white hover:text-black hover:border-black transition-all duration-300 border px-2 py-1 rounded-[8px]"
+                href="#">Ver Demo</a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-      <div></div>
     </div>
   );
 }
