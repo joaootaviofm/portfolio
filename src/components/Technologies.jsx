@@ -70,7 +70,7 @@ function Technologies() {
   }
 
   return (
-    <div className="relative text-white font-inter mt-[120px] pb-5">
+    <div className="relative text-white font-inter mt-[150px] pb-5">
       <div className="flex flex-col justify-center items-center z-10">
         <motion.h1
           initial={{ opacity: 0, x: -100 }}
@@ -88,7 +88,7 @@ function Technologies() {
           viewport={{ once: true }}
         >
           <span className="tracking-[5px] text-[12px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
-            SAIBA MAIS
+            MINHAS TECNOLOGIAS
           </span>
         </motion.p>
         <div className="flex flex-col bg-white/10 p-10 justify-center items-center rounded-lg backdrop-blur-sm border border-white/20 gap-10 mt-[30px]">
