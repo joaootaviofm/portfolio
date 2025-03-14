@@ -1,5 +1,5 @@
-import passwordGen from "../assets/me.webp";
-import soon from "../assets/soon.jpg";
+import passwordGen from "../assets/passwordgenerator.png";
+import soon from "../assets/soon.png";
 
 export default function Projects() {
   const projects = [
@@ -12,17 +12,7 @@ export default function Projects() {
     {
       imgsrc: soon,
       projectName: "Soon",
-      description: "Soon",
-    },
-    {
-      imgsrc: soon,
-      projectName: "Soon",
-      description: "Soon",
-    },
-    {
-      imgsrc: soon,
-      projectName: "Soon",
-      description: "Soon",
+      description: "Coming soon",
     },
   ];
 
@@ -36,16 +26,7 @@ export default function Projects() {
           </span>
         </p>
       </div>
-      <div
-        id="projects"
-        className="mt-10 place-items-center text-white grid grid-cols-1 md:grid-cols-2"
-      >
-        {projects.map((project, index) => (
-          <div key={index}>
-            <p>{project.projectName}</p>
-          </div>
-        ))}
-      </div>
+      <div></div>
     </div>
   );
 }
