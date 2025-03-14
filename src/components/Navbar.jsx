@@ -1,9 +1,10 @@
 import Logo from "../assets/logo.svg";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import { Link } from "react-scroll"
 
 function Navbar() {
-  const navList = ["Sobre", "Home", "Projetos"];
+  const navList = ["Home", "Sobre", "Projetos", "Tecnologias"];
 
   return (
     <nav className="relative w-screen flex justify-between items-center px-20 py-7">
@@ -30,7 +31,12 @@ function Navbar() {
               key={index}
               className="hover:text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051] cursor-pointer border-b-[1px] border-transparent hover:border-white duration-500"
             >
-              {item}
+              <Link 
+              to={item == "Sobre" ? "about" : item == "Home" ? "hero" : item == "Projetos" ? "projects" : item == "Tecnologias" ? "technologies" : ""}
+              smooth={true}
+              duration={700}
+              offset={item == "Sobre" ? -300 : null}
+              >{item}</Link>
             </motion.button>
           </li>
         ))}
