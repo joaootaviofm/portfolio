@@ -7,8 +7,8 @@ function Navbar() {
   const navList = ["Home", "Sobre", "Tecnologias", "Projetos"];
 
   return (
-    <nav className="relative w-screen flex justify-between items-center px-20 py-7">
-      <div className="z-10 hover:scale-110 duration-500 cursor-default">
+    <nav className="fixed bg-black/30 backdrop-blur-md border-b border-gray-700/20 z-50 w-full top-0 flex justify-between items-center px-20 py-7">
+      <div className="hover:scale-110 duration-500 cursor-default">
         <motion.img
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -20,7 +20,7 @@ function Navbar() {
           alt="Joao Otávio Logo"
         />
       </div>
-      <ul className="z-10 hidden md:flex text-white gap-10 font-semibold">
+      <ul className="hidden md:flex text-white gap-10 font-semibold">
         {navList.map((item, index) => (
           <li key={index}>
             <motion.button
@@ -34,7 +34,7 @@ function Navbar() {
               to={item == "Sobre" ? "about" : item == "Home" ? "hero" : item == "Projetos" ? "projects" : item == "Tecnologias" ? "technologies" : ""}
               smooth={true}
               duration={700}
-              offset={item == "Sobre" ? -300 : null}
+              offset={item == "Sobre" ? -300 : item == "Home" ? -300 : null}
               >{item}</Link>
             </motion.button>
           </li>
