@@ -92,7 +92,7 @@ function Technologies() {
           </span>
         </motion.p>
         <div className="flex flex-col bg-white/10 p-10 justify-center items-center rounded-lg backdrop-blur-sm border border-white/20 gap-10 mt-[30px]">
-          <div className="flex gap-[4px] items-center">
+          <div id='technologies' className="flex gap-[4px] items-center">
             {techStack.map((tech, index) => (
               <motion.div
                 initial={{ opacity: 0, x: 100 }}

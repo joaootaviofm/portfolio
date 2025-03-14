@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 function About() {
   return (
     <div className="font-inter mt-[150px] z-10 relative pb-7">
-      <div className="z-20 flex flex-col items-center justify-center">
+      <div id='about' className="z-20 flex flex-col items-center justify-center">
         <motion.h1
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
