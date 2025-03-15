@@ -29,29 +29,31 @@ export default function Footer() {
         >
           MEUS CONTATOS
         </motion.span>
-        <div className="text-xl md:text-3xl mt-[30px] flex justify-center items-center gap-5">
-          <motion.a
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0 }}
-            viewport={{ once: true }}
-            href="https://www.linkedin.com/in/joaootaviofm10/"
-            target="blank"
-            className="hover:scale-115 hover:shadow-xl hover:shadow-white/20 duration-300"
-          >
-            <FaLinkedin />
-          </motion.a>
-          <motion.a
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            viewport={{ once: true }}
-            href="https://github.com/joaootaviofm/"
-            target="blank"
-            className="hover:shadow-xl hover:shadow-white/20 hover:scale-115 duration-300"
-          >
-            <FaGithub />
-          </motion.a>
+        <div className="text-3xl mt-[30px] flex flex-col md:flex-row md:flex-rowjustify-center items-center gap-5">
+          <div className="w-full flex justify-center gap-[20px]">
+            <motion.a
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0 }}
+              viewport={{ once: true }}
+              href="https://www.linkedin.com/in/joaootaviofm10/"
+              target="blank"
+              className="hover:scale-115 hover:shadow-xl hover:shadow-white/20 duration-300"
+            >
+              <FaLinkedin />
+            </motion.a>
+            <motion.a
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              href="https://github.com/joaootaviofm/"
+              target="blank"
+              className="hover:shadow-xl hover:shadow-white/20 hover:scale-115 duration-300"
+            >
+              <FaGithub />
+            </motion.a>
+          </div>
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
