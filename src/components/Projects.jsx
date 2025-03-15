@@ -65,7 +65,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="hover:bg-white/20 hover:shadow-xl hover:shadow-white/40 hover:scale-110 rounded-xl transition-all duration-300 p-5 -white flex items-center gap-4"
+            className="hover:bg-white/20 hover:shadow-xl hover:shadow-white/40 hover:scale-110 rounded-xl transition-all duration-300 p-2 md:p-5 -white flex items-center justify-center gap-4"
           >
             <motion.div
               initial={{ x: -100, opacity: 0 }}
@@ -74,9 +74,8 @@ export default function Projects() {
               viewport={{ once: true }}
             >
               <img
-                className="rounded-md"
-                width={150}
-                height={150}
+                className="rounded-md max-w-[100px] md:max-w-[150px]"
+
                 src={project.imgsrc}
                 alt=""
               />
@@ -87,7 +86,7 @@ export default function Projects() {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 * index }}
                 viewport={{ once: true }}
-                className="cursor-default font-extrabold text-[20px]"
+                className="cursor-default font-extrabold text-[14px] md:text-[20px]"
               >
                 {project.projectName}
               </motion.h1>
@@ -96,17 +95,17 @@ export default function Projects() {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 * index }}
                 viewport={{ once: true }}
-                className="cursor-default text-justify max-w-[250px] font-medium text-[12px] text-[#878787]"
+                className="cursor-default text-justify max-w-[200px] font-medium text-[11px] md:text-[12px] text-[#878787]"
               >
                 {project.description}
               </motion.p>
-              <div className="flex gap-5 mt-[20px]">
+              <div className="flex items-center gap-5 mt-[5px] md:mt-[20px]">
                 <motion.a
                   initial={{ x: 100, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.7 * index }}
                   viewport={{ once: true }}
-                  className="text-[16px] bg-white text-black hover:bg-black hover:text-white transition-all duration-300 border border-transparent hover:border-white px-2 py-1 rounded-[8px]"
+                  className="text-[12px] md:text-[16px] bg-white text-black hover:bg-black hover:text-white transition-all duration-300 border border-transparent hover:border-white px-2 py-1 rounded-[8px]"
                   href={project.gitLink}
                   target="blank"
                 >
@@ -117,7 +116,7 @@ export default function Projects() {
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.9 * index }}
                   viewport={{ once: true }}
-                  className="text-[16px] bg-black text-white border-white/20 hover:bg-white hover:text-black hover:border-black transition-all duration-300 border px-2 py-1 rounded-[8px]"
+                  className="text-[12px] md:text-[16px] bg-black text-white border-white/20 hover:bg-white hover:text-black hover:border-black transition-all duration-300 border px-2 py-1 rounded-[8px]"
                   href={project.demolink}
                   target="blank"
                 >
