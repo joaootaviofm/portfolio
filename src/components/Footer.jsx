@@ -29,7 +29,7 @@ export default function Footer() {
         >
           MEUS CONTATOS
         </motion.span>
-        <div className="text-2xl md:text-3xl mt-[30px] flex justify-center items-center gap-5">
+        <div className="text-xl md:text-3xl mt-[30px] flex justify-center items-center gap-5">
           <motion.a
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
