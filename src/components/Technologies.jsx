@@ -91,10 +91,11 @@ function Technologies() {
             MINHAS TECNOLOGIAS
           </span>
         </motion.p>
-        <div className="flex flex-col hover:scale-110 duration-300 bg-white/10 p-10 justify-center items-center rounded-lg backdrop-blur-sm border border-white/20 gap-10 mt-[30px]">
-          <div id='technologies' className="flex gap-[4px] items-center">
+        <div className="max-w-[300px] flex flex-col hover:scale-110 duration-300 bg-white/10 p-10 justify-center items-center rounded-lg backdrop-blur-sm border border-white/20 gap-10 mt-[30px]">
+          <div id="technologies" className=" flex flex-col md:flex-row gap-[10px] md:gap-[4px] items-center">
             {techStack.map((tech, index) => (
               <motion.div
+                className="hover:scale-110 duration-300 text-7xl items-center"
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 * index }}
@@ -102,10 +103,9 @@ function Technologies() {
                 onMouseEnter={() => handleText(index)}
                 onMouseLeave={() =>
                   setText(
-                    "Coloque o mouse em cima da linguagem para ver a descricao."
+                    "Toque na imagem para ver seu nome."
                   )
                 }
-                className="hover:scale-110 duration-300 text-7xl flex gap-1 items-center"
                 key={index}
               >
                 {tech.icon}
