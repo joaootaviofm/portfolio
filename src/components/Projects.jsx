@@ -1,5 +1,7 @@
 // import passwordGen from "../assets/passwordgenerator.png";
 import soon from "../assets/soon.png";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const projects = [
@@ -42,19 +44,35 @@ export default function Projects() {
       id="projects"
       className="mt-[150px] font-inter relative z-10 text-white flex flex-col justify-center items-center"
     >
-      <h1 className="text-[45px] font-extrabold">PROJETOS</h1>
-      <p>
+      <motion.h1
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="text-[45px] font-extrabold"
+      >
+        PROJETOS
+      </motion.h1>
+      <motion.p
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
         <span className="tracking-[5px] text-[12px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
           MEUS PROJETOS
         </span>
-      </p>
+      </motion.p>
       <div className="mt-[30px] grid lg:grid-cols-2 grid-cols-1 gap-y-10 gap-x-20">
         {projects.map((project, index) => (
           <div
             key={index}
             className="hover:bg-white/20 hover:shadow-xl hover:shadow-white/40 hover:scale-110 rounded-xl transition-all duration-300 p-5 -white flex items-center gap-4"
           >
-            <div>
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.15 * index }}
+              viewport={{ once: true }}
+            >
               <img
                 className="rounded-md"
                 width={150}
@@ -62,29 +80,49 @@ export default function Projects() {
                 src={project.imgsrc}
                 alt=""
               />
-            </div>
+            </motion.div>
             <div className="flex-col justify-center">
-              <h1 className="cursor-default font-extrabold text-[20px]">
+              <motion.h1
+                initial={{ x: 100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 * index }}
+                viewport={{ once: true }}
+                className="cursor-default font-extrabold text-[20px]"
+              >
                 {project.projectName}
-              </h1>
-              <p className="cursor-default text-justify max-w-[250px] font-medium text-[12px] text-[#878787]">
+              </motion.h1>
+              <motion.p
+                initial={{ x: 100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.5 * index }}
+                viewport={{ once: true }}
+                className="cursor-default text-justify max-w-[250px] font-medium text-[12px] text-[#878787]"
+              >
                 {project.description}
-              </p>
+              </motion.p>
               <div className="flex gap-5 mt-[20px]">
-                <a
+                <motion.a
+                  initial={{ x: 100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.7 * index }}
+                  viewport={{ once: true }}
                   className="text-[16px] bg-white text-black hover:bg-black hover:text-white transition-all duration-300 border border-transparent hover:border-white px-2 py-1 rounded-[8px]"
                   href={project.gitLink}
                   target="blank"
                 >
                   Ver código
-                </a>
-                <a
+                </motion.a>
+                <motion.a
+                  initial={{ x: 100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.9 * index }}
+                  viewport={{ once: true }}
                   className="text-[16px] bg-black text-white border-white/20 hover:bg-white hover:text-black hover:border-black transition-all duration-300 border px-2 py-1 rounded-[8px]"
                   href={project.demolink}
                   target="blank"
                 >
                   Ver Demo
-                </a>
+                </motion.a>
               </div>
             </div>
           </div>
