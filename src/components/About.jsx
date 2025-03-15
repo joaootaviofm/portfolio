@@ -4,7 +4,10 @@ import { motion } from "motion/react";
 function About() {
   return (
     <div className="font-inter mt-[150px] z-10 relative pb-7">
-      <div id='about' className="z-20 flex flex-col items-center justify-center">
+      <div
+        id="about"
+        className="z-20 flex flex-col items-center justify-center"
+      >
         <motion.h1
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -30,7 +33,7 @@ function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
-            className="max-w-[700px]"
+            className="max-w-[300px] md:max-w-[700px]"
           >
             Meu nome é João Otávio, tenho 20 anos e sou desenvolvedor com
             habilidades em Javascript, HTML, CSS, React, NextJS, Tailwind, Java
@@ -41,7 +44,7 @@ function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.75 }}
             viewport={{ once: true }}
-            className="max-w-[700px]"
+            className="max-w-[300px] md:max-w-[700px]"
           >
             Tenho como objetivo entregar resultados, resolver problemas e ajudar
             no dia-a-dia com qualquer coisa que for necessária. Entretanto,
