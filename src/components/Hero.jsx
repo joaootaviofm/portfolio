@@ -1,10 +1,11 @@
 import me from "../assets/me.webp";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
+import { Link } from "react-scroll";
 
 function Hero() {
   return (
-    <div id='hero' className="flex flex-col items-center justify-center text-white mt-[150px]">
+    <div id="hero" className="flex flex-col items-center justify-center text-white mt-[150px]">
       <div className="overflow-hidden relative border border-white/20 bg-[#1A1A1A] w-[231px] h-[231px] rounded-full mb-[15px]">
         <motion.img
           initial={{ opacity: 0, y: 200 }}
@@ -48,13 +49,18 @@ function Hero() {
           de problemas e evolução constante.
         </motion.p>
         <div className="mt-10">
+          
           <motion.button
             initial={{ opacity: 0, x: -150 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
             className="hover:bg-white hover:text-black duration-700 ease-in-out cursor-pointer bg-black px-10 py-4 rounded-full border border-[#585858] font-medium text-white "
           >
+            <Link to="contact"
+            smooth={true}
+            duration={700}>
             Entre em contato
+            </Link>
           </motion.button>
         </div>
       </div>

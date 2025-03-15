@@ -44,7 +44,7 @@ export default function Projects() {
     >
       <h1 className="text-[45px] font-extrabold">PROJETOS</h1>
       <p>
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
+        <span className="tracking-[5px] text-[12px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
           MEUS PROJETOS
         </span>
       </p>
@@ -80,7 +80,9 @@ export default function Projects() {
                 </a>
                 <a
                   className="text-[16px] bg-black text-white border-white/20 hover:bg-white hover:text-black hover:border-black transition-all duration-300 border px-2 py-1 rounded-[8px]"
-                  href={project.demolink} target="blank">
+                  href={project.demolink}
+                  target="blank"
+                >
                   Ver Demo
                 </a>
               </div>

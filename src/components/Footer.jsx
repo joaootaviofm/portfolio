@@ -8,8 +8,11 @@ export default function Footer() {
       id="contact"
       className="font-inter flex flex-col justify-center items-center relative z-10 mt-[150px] mb-[50px]"
     >
-      <div className="text-white flex flex-col">
+      <div className="text-white flex items-center  justify-center flex-col">
         <h1 className="text-[45px] font-extrabold">ENTRE EM CONTATO</h1>
+        <span className="tracking-[5px] text-[12px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
+          MEUS CONTATOS
+        </span>
         <div className="text-3xl mt-[30px] flex justify-center items-center gap-5">
           <a
             href="https://www.linkedin.com/in/joaootaviofm10/"

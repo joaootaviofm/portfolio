@@ -51,6 +51,8 @@ function Navbar() {
                     ? -300
                     : item == "Tecnologias"
                     ? -500
+                    : item == "Projetos"
+                    ? -200
                     : null
                 }
               >
