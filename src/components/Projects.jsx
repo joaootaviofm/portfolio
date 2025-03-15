@@ -40,9 +40,9 @@ export default function Projects() {
           MEUS PROJETOS
         </span>
       </p>
-      <div className="mt-[30px] grid lg:grid-cols-2 grid-cols-1 gap-y-5 gap-x-10">
+      <div className="mt-[30px] grid lg:grid-cols-2 grid-cols-1 gap-y-10 gap-x-20">
         {projects.map((project, index) => (
-          <div key={index} className="flex items-center gap-4">
+          <div key={index} className="hover:bg-white/20 hover:shadow-xl hover:shadow-white/40 hover:scale-110 rounded-xl transition-all duration-300 p-5 -white flex items-center gap-4">
             <div>
               <img
               className="rounded-md"
