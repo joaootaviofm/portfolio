@@ -91,7 +91,7 @@ function Technologies() {
             MINHAS TECNOLOGIAS
           </span>
         </motion.p>
-        <div className="flex flex-col bg-white/10 p-10 justify-center items-center rounded-lg backdrop-blur-sm border border-white/20 gap-10 mt-[30px]">
+        <div className="flex flex-col hover:scale-110 duration-300 bg-white/10 p-10 justify-center items-center rounded-lg backdrop-blur-sm border border-white/20 gap-10 mt-[30px]">
           <div id='technologies' className="flex gap-[4px] items-center">
             {techStack.map((tech, index) => (
               <motion.div
