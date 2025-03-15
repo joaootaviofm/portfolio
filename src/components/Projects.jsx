@@ -64,10 +64,10 @@ export default function Projects() {
               />
             </div>
             <div className="flex-col justify-center">
-              <h1 className="font-extrabold text-[20px]">
+              <h1 className="cursor-default font-extrabold text-[20px]">
                 {project.projectName}
               </h1>
-              <p className="text-justify max-w-[250px] font-medium text-[12px] text-[#878787]">
+              <p className="cursor-default text-justify max-w-[250px] font-medium text-[12px] text-[#878787]">
                 {project.description}
               </p>
               <div className="flex gap-5 mt-[20px]">
