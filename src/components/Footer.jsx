@@ -1,6 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -9,13 +10,13 @@ export default function Footer() {
       id="contact"
       className="font-inter flex flex-col justify-center items-center relative z-10 mt-[150px] mb-[50px]"
     >
-      <div className="text-white flex items-center  justify-center flex-col">
+      <div className="text-white flex items-center justify-center flex-col">
         <motion.h1
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0 }}
           viewport={{ once: true }}
-          className="text-[45px] font-extrabold"
+          className="text-[35px] md:text-[45px] font-extrabold"
         >
           ENTRE EM CONTATO
         </motion.h1>
