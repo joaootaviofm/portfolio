@@ -55,7 +55,7 @@ function Technologies() {
         setText("Tailwind");
         break;
       case 6:
-        setText("Kava");
+        setText("Java");
         break;
       case 7:
         setText("Springboot");
