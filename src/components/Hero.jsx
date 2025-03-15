@@ -23,7 +23,7 @@ function Hero() {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0 }}
-          className="font-bold text-[63px] mb-[-15px]"
+          className="font-bold text-[53px] md:text-[63px] mb-[-15px]"
         >
           João Otávio
         </motion.h1>
@@ -42,7 +42,7 @@ function Hero() {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
-          className="text-[16px] text-center max-w-[1000px] mt-[20px] text-[#E1E1E1] font-medium"
+          className="text-center max-w-[1000px] mt-[20px] text-[#E1E1E1] font-medium"
         >
           Desenvolvedor com habilidades em JavaScript, HTML, CSS, React,
           Next.js, Tailwind, Java e Git/GitHub. Focado em resultados, resolução
