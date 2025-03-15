@@ -4,7 +4,10 @@ import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <div className="font-inter flex flex-col justify-center items-center relative z-10 mt-[150px] mb-[50px]">
+    <div
+      id="contact"
+      className="font-inter flex flex-col justify-center items-center relative z-10 mt-[150px] mb-[50px]"
+    >
       <div className="text-white flex flex-col">
         <h1 className="text-[45px] font-extrabold">ENTRE EM CONTATO</h1>
         <div className="text-3xl mt-[30px] flex justify-center items-center gap-5">
