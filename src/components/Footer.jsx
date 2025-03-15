@@ -57,7 +57,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
             viewport={{ once: true }}
-            className="hover:shadow-xl hover:shadow-white/20 relative pr-9 pl-5 py-2 flex items-center justify-center bg-white rounded-full border hover:scale-110 duration-400 "
+            className="hover:shadow-xl hover:shadow-white/20 relative pl-[5px] pr-[30px] md:pr-9 md:pl-5 md:py-2 flex items-center justify-center bg-white rounded-full border hover:scale-110 duration-400 "
           >
             <p className="text-base text-black">joaootaviofm@gmail.com</p>
             <span className="absolute right-1 text-black">
