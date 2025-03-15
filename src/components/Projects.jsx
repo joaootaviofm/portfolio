@@ -6,26 +6,34 @@ export default function Projects() {
     {
       imgsrc: soon,
       projectName: "Soon",
-      description: "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
-      link: "#",
+      description:
+        "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
+      gitLink: "https://github.com/joaootaviofm/",
+      demolink: "https://vercel.com/",
     },
     {
       imgsrc: soon,
       projectName: "Soon",
-      description: "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
-      link: "#",
+      description:
+        "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
+      gitLink: "https://github.com/joaootaviofm/",
+      demolink: "https://vercel.com/",
     },
     {
       imgsrc: soon,
       projectName: "Soon",
-      description: "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
-      link: "#",
+      description:
+        "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
+      gitLink: "https://github.com/joaootaviofm/",
+      demolink: "https://vercel.com/",
     },
     {
       imgsrc: soon,
       projectName: "Soon",
-      description: "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
-      link: "#",
+      description:
+        "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
+      gitLink: "https://github.com/joaootaviofm/",
+      demolink: "https://vercel.com/",
     },
   ];
 
@@ -42,22 +50,39 @@ export default function Projects() {
       </p>
       <div className="mt-[30px] grid lg:grid-cols-2 grid-cols-1 gap-y-10 gap-x-20">
         {projects.map((project, index) => (
-          <div key={index} className="hover:bg-white/20 hover:shadow-xl hover:shadow-white/40 hover:scale-110 rounded-xl transition-all duration-300 p-5 -white flex items-center gap-4">
+          <div
+            key={index}
+            className="hover:bg-white/20 hover:shadow-xl hover:shadow-white/40 hover:scale-110 rounded-xl transition-all duration-300 p-5 -white flex items-center gap-4"
+          >
             <div>
               <img
-              className="rounded-md"
-               width={150} height={150} src={project.imgsrc} alt="" />
+                className="rounded-md"
+                width={150}
+                height={150}
+                src={project.imgsrc}
+                alt=""
+              />
             </div>
             <div className="flex-col justify-center">
-              <h1 className="font-extrabold text-[20px]">{project.projectName}</h1>
-              <p className="text-justify max-w-[250px] font-medium text-[12px] text-[#878787]">{project.description}</p>
+              <h1 className="font-extrabold text-[20px]">
+                {project.projectName}
+              </h1>
+              <p className="text-justify max-w-[250px] font-medium text-[12px] text-[#878787]">
+                {project.description}
+              </p>
               <div className="flex gap-5 mt-[20px]">
-                <a 
-                className="text-[16px] bg-white text-black hover:bg-black hover:text-white transition-all duration-300 border border-transparent hover:border-white px-2 py-1 rounded-[8px]"
-                href="#">Ver código</a>
-                <a 
-                className="text-[16px] bg-black text-white border-white/20 hover:bg-white hover:text-black hover:border-black transition-all duration-300 border px-2 py-1 rounded-[8px]"
-                href="#">Ver Demo</a>
+                <a
+                  className="text-[16px] bg-white text-black hover:bg-black hover:text-white transition-all duration-300 border border-transparent hover:border-white px-2 py-1 rounded-[8px]"
+                  href={project.gitLink}
+                  target="blank"
+                >
+                  Ver código
+                </a>
+                <a
+                  className="text-[16px] bg-black text-white border-white/20 hover:bg-white hover:text-black hover:border-black transition-all duration-300 border px-2 py-1 rounded-[8px]"
+                  href={project.demolink} target="blank">
+                  Ver Demo
+                </a>
               </div>
             </div>
           </div>
