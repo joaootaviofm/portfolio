@@ -38,7 +38,7 @@ export default function Footer() {
               viewport={{ once: true }}
               href="https://www.linkedin.com/in/joaootaviofm10/"
               target="blank"
-              className="hover:scale-115 hover:shadow-xl hover:shadow-white/20 duration-300"
+              className="rounded-md hover:scale-115 hover:shadow-xl hover:shadow-white/20 duration-300"
             >
               <FaLinkedin />
             </motion.a>
@@ -49,7 +49,7 @@ export default function Footer() {
               viewport={{ once: true }}
               href="https://github.com/joaootaviofm/"
               target="blank"
-              className="hover:shadow-xl hover:shadow-white/20 hover:scale-115 duration-300"
+              className="hover:shadow-xl rounded-2xl hover:shadow-white/20 hover:scale-115 duration-300"
             >
               <FaGithub />
             </motion.a>
