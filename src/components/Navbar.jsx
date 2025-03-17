@@ -1,10 +1,14 @@
 import Logo from "../assets/logo.svg";
+import { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 function Navbar() {
   const navList = ["Home", "Sobre", "Tecnologias", "Projetos"];
+
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="fixed bg-black/30 backdrop-blur-md border-b border-gray-700/20 z-50 w-full top-0 flex justify-between items-center px-20 py-7">
@@ -62,7 +66,7 @@ function Navbar() {
           </li>
         ))}
       </ul>
-      <div className="flex gap-10">
+      <div className="hidden md:flex gap-10">
         <motion.button
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -74,6 +78,57 @@ function Navbar() {
             Contato
           </Link>
         </motion.button>
+      </div>
+      <div className="md:hidden text-2xl text-white">
+        <GiHamburgerMenu onClick={() => setIsOpen(!isOpen)} />
+        {isOpen && (
+          <motion.ul
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            exit={{ y: -100, opacity: 0 }}
+            className="bg-white/90 border-4 border-white text-black rounded-2xl absolute w-96 top-[230px] left-1/2 -translate-1/2"
+          >
+            {navList.map((item, index) => (
+              <Link
+                onClick={() => setIsOpen(!isOpen)}
+                to={
+                  item == "Home"
+                    ? "hero"
+                    : item == "Sobre"
+                    ? "about"
+                    : item == "Tecnologias"
+                    ? "technologies"
+                    : item == "Contato"
+                    ? "contact"
+                    : item == "Projetos"
+                    ? "projects"
+                    : null
+                }
+                smooth={true}
+                duration={700}
+                offset={
+                  item == "Home"
+                    ? -300
+                    : item == "Sobre"
+                    ? -250
+                    : item == "Tecnologias"
+                    ? -300
+                    : item == "Projetos"
+                    ? -120
+                    : null
+                }
+              >
+                <li
+                  className="p-4 text-center active:bg-white/40 rounded-2xl"
+                  key={index}
+                >
+                  <span className="font-semibold">{item}</span>
+                </li>
+              </Link>
+            ))}
+          </motion.ul>
+        )}
       </div>
     </nav>
   );
