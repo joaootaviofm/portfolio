@@ -11,7 +11,7 @@ export default function Projects() {
       description:
         "(Em desenvolvimento) Taskly é um tracker de dailytasks que irá te ajudar em produtividade e usar IA para isso.",
       gitLink: "https://github.com/joaootaviofm/dailytasks",
-      demolink: "https://dailytasks-teal.vercel.app/tasks",
+      demolink: "https://dailytasks-teal.vercel.app",
     },
     {
       imgsrc: soon,
