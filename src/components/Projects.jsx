@@ -7,11 +7,11 @@ export default function Projects() {
   const projects = [
     {
       imgsrc: soon,
-      projectName: "Soon",
+      projectName: "Taskly",
       description:
-        "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
-      gitLink: "https://github.com/joaootaviofm/",
-      demolink: "https://vercel.com/",
+        "(Em desenvolvimento) Taskly é um tracker de dailytasks que irá te ajudar em produtividade e usar IA para isso.",
+      gitLink: "https://github.com/joaootaviofm/dailytasks",
+      demolink: "https://dailytasks-teal.vercel.app/tasks",
     },
     {
       imgsrc: soon,
