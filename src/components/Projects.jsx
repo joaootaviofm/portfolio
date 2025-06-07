@@ -6,36 +6,28 @@ import { motion } from "framer-motion";
 export default function Projects() {
   const projects = [
     {
-      imgsrc: soon,
-      projectName: "Taskly",
-      description:
-        "(Em desenvolvimento) Taskly é um tracker de dailytasks que irá te ajudar em produtividade e usar IA para isso.",
-      gitLink: "https://github.com/joaootaviofm/dailytasks",
-      demolink: "https://dailytasks-teal.vercel.app",
+      projectName: "Business Process Automation Suite (In Development)",
+      description: `A modular suite of advanced automations for business operations, integrating multiple tools and APIs to streamline workflows across departments. Includes:\n\nEmployee Onboarding Workflow\n- Trigger: New hire in HR system\n- Auto-creates accounts (email, Slack, Notion), assigns tasks, schedules meetings, sends welcome messages, notifies IT, and logs all actions.\n- Tools: HR Software, Google Workspace, Notion, Slack, Email, WhatsApp\n\nFinancial Reconciliation Bot\n- Trigger: End of month\n- Pulls payment info from Stripe, PayPal, Bank API; cross-checks with ERP; flags inconsistencies; notifies finance; generates reports; AI summarizes discrepancies.\n- Tools: Stripe, ERP, Google Sheets, Email, Slack, OpenAI, n8n\n\nCustomer Support Escalation System\n- Trigger: Negative feedback or unresolved ticket\n- Uses AI sentiment analysis, escalates urgent cases, auto-assigns agents, notifies via Slack/WhatsApp, updates CRM.\n- Tools: Zendesk, OpenAI, Slack, WhatsApp, CRM, n8n\n\nExecutive Summary Generator\n- Trigger: Daily/Weekly cron\n- Pulls KPIs from multiple sources, uses GPT to summarize, auto-formats into PDF/Notion, sends to leadership.\n- Tools: n8n, APIs, OpenAI, Google Drive, Notion, Slack, Email\n\nSecurity & Logging\n- All workflows log actions in PostgreSQL/Supabase\n- Error handling with retry logic and notifications\n- Full audit trail for compliance (GDPR, LGPD, ISO)`
     },
     {
-      imgsrc: soon,
-      projectName: "Soon",
+      projectName: "Ecommerce Automation Suite",
       description:
-        "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
-      gitLink: "https://github.com/joaootaviofm/",
-      demolink: "https://vercel.com/",
+        `A comprehensive automation solution for ecommerce businesses:\n- RAG 24/7 AI Support: Instantly answers customer questions, reduces support costs, and integrates with your product catalog.\n- Remarketing Email Triggering & Cart Recovery: Detects abandoned carts and sends personalized emails, recovering lost sales (e.g., 100 carts/month, 5% conversion = R$500+ saved).\n- AI Upsell & Personalized Follow-up: Recommends products and sends tailored follow-ups to increase order value and retention.\n- Weekly Insights & Audience Analytics: Automated reports on sales, trends, and buyer demographics (e.g., "Men aged 25-50 buy this on weekends").`,
     },
     {
-      imgsrc: soon,
-      projectName: "Soon",
+      projectName: "BarberBot 24/7 Smart Assistant",
       description:
-        "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
-      gitLink: "https://github.com/joaootaviofm/",
-      demolink: "https://vercel.com/",
+        `AI-powered virtual assistant for barbershops, built with n8n:\n- Automates WhatsApp customer service, answers FAQs, books appointments, and sends reminders.\n- Operates 24/7, reducing manual workload and increasing client satisfaction.\n- Fully integrated with Google Calendar and scheduling spreadsheets for accurate, efficient time management.`,
     },
     {
-      imgsrc: soon,
-      projectName: "Soon",
+      projectName: "Restaurant Ordering Bot",
       description:
-        "Descricoes dos projetos serão colocadas aqui contendo todas as informacoes necessárias",
-      gitLink: "https://github.com/joaootaviofm/",
-      demolink: "https://vercel.com/",
+        `AI-driven WhatsApp ordering system for restaurants:\n- Customers order via WhatsApp, select menu items, and receive instant confirmation with estimated delivery time.\n- Integrates with Google Sheets or POS systems for real-time order tracking and kitchen management.\n- Reduces phone traffic, minimizes errors, and improves customer experience with automated, friendly communication.`,
+    },
+    {
+      projectName: "Real Estate Lead Qualifier",
+      description:
+        `AI assistant for real estate agencies:\n- Qualifies incoming leads via WhatsApp or web chat, asks key questions, and captures buyer/renter preferences.\n- Automatically updates CRM or spreadsheets with qualified leads.\n- Schedules viewings and follow-ups, saving agents hours each week and increasing conversion rates.`,
     },
   ];
 
@@ -50,7 +42,7 @@ export default function Projects() {
         transition={{ duration: 0.5 }}
         className="text-[45px] font-extrabold"
       >
-        PROJETOS
+        PROJECTS
       </motion.h1>
       <motion.p
         initial={{ x: -100, opacity: 0 }}
@@ -58,35 +50,22 @@ export default function Projects() {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <span className="tracking-[5px] text-[12px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
-          MEUS PROJETOS
+          REAL AND IN-PROGRESS SYSTEMS I'M WORKING ON
         </span>
       </motion.p>
-      <div className="mt-[30px] grid lg:grid-cols-2 grid-cols-1 gap-y-10 gap-x-20">
+      <div className="mt-[30px] grid grid-cols-1 lg:grid-cols-2 gap-y-12 gap-x-20 items-stretch">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="hover:bg-white/20 hover:shadow-xl hover:shadow-white/40 hover:scale-110 rounded-xl transition-all duration-300 p-2 md:p-5 -white flex items-center justify-center gap-4"
+            className={`h-full min-h-[320px] flex flex-col justify-between items-center bg-white/5 hover:bg-white/20 hover:shadow-xl hover:shadow-white/40 hover:scale-105 rounded-xl transition-all duration-300 p-6 md:p-8 max-w-[500px] mx-auto ${index === 0 ? 'lg:col-span-2' : ''}`}
           >
-            <motion.div
-              initial={{ x: -100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.15 * index }}
-              viewport={{ once: true }}
-            >
-              <img
-                className="rounded-md max-w-[100px] md:max-w-[150px]"
-
-                src={project.imgsrc}
-                alt=""
-              />
-            </motion.div>
-            <div className="flex-col justify-center">
+            <div className="w-full flex flex-col items-center">
               <motion.h1
                 initial={{ x: 100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 * index }}
                 viewport={{ once: true }}
-                className="cursor-default font-extrabold text-[14px] md:text-[20px]"
+                className="cursor-default font-extrabold text-center text-[18px] md:text-[22px] mb-4"
               >
                 {project.projectName}
               </motion.h1>
@@ -95,34 +74,10 @@ export default function Projects() {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 * index }}
                 viewport={{ once: true }}
-                className="cursor-default text-justify max-w-[200px] font-medium text-[11px] md:text-[12px] text-[#878787]"
+                className="cursor-default text-justify max-w-[420px] font-medium text-[13px] md:text-[15px] text-[#d1d1d1] whitespace-pre-line"
               >
                 {project.description}
               </motion.p>
-              <div className="flex items-center gap-5 mt-[5px] md:mt-[20px]">
-                <motion.a
-                  initial={{ x: 100, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.7 * index }}
-                  viewport={{ once: true }}
-                  className="text-[12px] md:text-[16px] bg-white text-black hover:bg-black hover:text-white transition-all duration-300 border border-transparent hover:border-white px-2 py-1 rounded-[8px]"
-                  href={project.gitLink}
-                  target="blank"
-                >
-                  Ver código
-                </motion.a>
-                <motion.a
-                  initial={{ x: 100, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.9 * index }}
-                  viewport={{ once: true }}
-                  className="text-[12px] md:text-[16px] bg-black text-white border-white/20 hover:bg-white hover:text-black hover:border-black transition-all duration-300 border px-2 py-1 rounded-[8px]"
-                  href={project.demolink}
-                  target="blank"
-                >
-                  Ver Demo
-                </motion.a>
-              </div>
             </div>
           </div>
         ))}

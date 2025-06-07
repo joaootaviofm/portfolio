@@ -18,7 +18,7 @@ export default function Footer() {
           viewport={{ once: true }}
           className="text-[35px] md:text-[45px] font-extrabold"
         >
-          ENTRE EM CONTATO
+          GET IN TOUCH
         </motion.h1>
         <motion.span
           initial={{ opacity: 0, x: -100 }}
@@ -27,7 +27,7 @@ export default function Footer() {
           viewport={{ once: true }}
           className="tracking-[5px] text-[12px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]"
         >
-          MEUS CONTATOS
+          MY CONTACTS
         </motion.span>
         <div className="text-3xl mt-[30px] flex flex-col md:flex-row md:flex-rowjustify-center items-center gap-5">
           <div className="w-full flex justify-center gap-[20px]">

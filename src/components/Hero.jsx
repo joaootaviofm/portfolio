@@ -36,9 +36,9 @@ function Hero() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-[26px] font-semibold text-[#C9C9C9]"
         >
-          Desenvolvedor{" "}
+          AI & Automation{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
-            Fullstack
+            Specialist
           </span>
         </motion.p>
         <motion.p
@@ -47,9 +47,15 @@ function Hero() {
           transition={{ duration: 0.5, delay: 1 }}
           className="text-center max-w-[1000px] mt-[20px] text-[#E1E1E1] font-medium"
         >
-          Desenvolvedor com habilidades em JavaScript, HTML, CSS, React,
-          Next.js, Tailwind, Java e Git/GitHub. Focado em resultados, resolução
-          de problemas e evolução constante.
+          I design and build AI-powered automations that save time, boost efficiency, and scale operations.
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 1.2 }}
+          className="text-center max-w-[1000px] mt-[10px] text-[#E1E1E1] font-medium"
+        >
+          From smart workflows to LLM-integrated systems, I combine code and creativity to deliver real impact and value to your business.
         </motion.p>
         <div className="mt-10">
           <motion.button
@@ -59,7 +65,7 @@ function Hero() {
             className="hover:bg-white hover:text-black duration-700 ease-in-out cursor-pointer bg-black px-10 py-4 rounded-full border border-[#585858] font-medium text-white "
           >
             <Link to="contact" smooth={true} duration={1000}>
-              Entre em contato
+              Get in touch
             </Link>
           </motion.button>
         </div>

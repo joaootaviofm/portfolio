@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 function Navbar() {
-  const navList = ["Home", "Sobre", "Tecnologias", "Projetos"];
+  const navList = ["Home", "About", "Technologies", "Projects"];
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -36,26 +36,26 @@ function Navbar() {
             >
               <Link
                 to={
-                  item == "Sobre"
+                  item == "About"
                     ? "about"
                     : item == "Home"
                     ? "hero"
-                    : item == "Projetos"
+                    : item == "Projects"
                     ? "projects"
-                    : item == "Tecnologias"
+                    : item == "Technologies"
                     ? "technologies"
                     : ""
                 }
                 smooth={true}
                 duration={700}
                 offset={
-                  item == "Sobre"
+                  item == "About"
                     ? -300
                     : item == "Home"
                     ? -300
-                    : item == "Tecnologias"
+                    : item == "Technologies"
                     ? -500
-                    : item == "Projetos"
+                    : item == "Projects"
                     ? -200
                     : null
                 }
@@ -75,7 +75,7 @@ function Navbar() {
           className="hover:bg-white hover:text-black duration-500 cursor-pointer px-5 py-2 rounded-[8.8px] text-[#E1E1E1] border border-[#9A9A9A]"
         >
           <Link to="contact" smooth={true} duration={700}>
-            Contato
+            Contact
           </Link>
         </motion.button>
       </div>
@@ -95,13 +95,13 @@ function Navbar() {
                 to={
                   item == "Home"
                     ? "hero"
-                    : item == "Sobre"
+                    : item == "About"
                     ? "about"
-                    : item == "Tecnologias"
+                    : item == "Technologies"
                     ? "technologies"
-                    : item == "Contato"
+                    : item == "Contact"
                     ? "contact"
-                    : item == "Projetos"
+                    : item == "Projects"
                     ? "projects"
                     : null
                 }
@@ -110,11 +110,11 @@ function Navbar() {
                 offset={
                   item == "Home"
                     ? -300
-                    : item == "Sobre"
+                    : item == "About"
                     ? -250
-                    : item == "Tecnologias"
+                    : item == "Technologies"
                     ? -300
-                    : item == "Projetos"
+                    : item == "Projects"
                     ? -120
                     : null
                 }
