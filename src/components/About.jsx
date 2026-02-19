@@ -1,70 +1,134 @@
-// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 
 function About() {
   return (
-    <div className="font-inter mt-[150px] z-10 relative pb-7">
-      <div
-        id="about"
-        className="z-20 flex flex-col items-center justify-center"
-      >
-        <motion.h1
-          initial={{ opacity: 0, x: -100 }}
+    <div className="mt-[150px] z-10 relative pb-7 px-4">
+      <div id="about" className="flex flex-col items-center justify-center">
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="font-extrabold text-white text-[45px]"
+          className="flex flex-col items-center mb-10"
         >
-          ABOUT ME
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <span className="tracking-[5px] text-[12px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
+          <span className="font-mono text-[#9C83FF]/45 text-[11px] mb-2 tracking-widest">
+            // section_02
+          </span>
+          <h1 className="font-extrabold text-white text-[42px] tracking-wider">ABOUT ME</h1>
+          <span className="tracking-[5px] text-[11px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
             LEARN MORE
           </span>
-        </motion.p>
-        <div className="mt-5 flex flex-col gap-5 text-center justify-center items-center text-white text-[17px] font-medium">
-          <motion.p
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="max-w-[300px] md:max-w-[700px]"
-          >
-            My name is João Otávio, I'm 20 years old and specialize in building intelligent automation systems using AI.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.75 }}
-            viewport={{ once: true }}
-            className="max-w-[300px] md:max-w-[700px]"
-          >
-            I help businesses automate repetitive tasks, integrate LLMs into their operations, and build scalable systems using tools like n8n, OpenAI, LangChain, and custom APIs.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 1 }}
-            viewport={{ once: true }}
-            className="max-w-[300px] md:max-w-[700px]"
-          >
-            My mission is to turn inefficiency into opportunity while constantly evolving as a developer. I'm passionate about combining code, logic, and AI to create real-world impact.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 1.25 }}
-            viewport={{ once: true }}
-            className="max-w-[300px] md:max-w-[700px] font-semibold"
-          >
-            ⚡ I'm results-driven, adaptable, and obsessed with making things smarter and faster.
-          </motion.p>
-        </div>
+        </motion.div>
+
+        {/* Terminal panel */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="w-full max-w-[760px] rounded-xl overflow-hidden border border-[#9C83FF]/20 shadow-[0_0_50px_rgba(156,131,255,0.07)]"
+        >
+          {/* Title bar */}
+          <div className="flex items-center gap-2 px-4 py-3 bg-[#0f0f0f] border-b border-[#9C83FF]/12">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
+            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/60" />
+            <span className="ml-4 font-mono text-[11px] text-[#9C83FF]/40">about_me.md — bash</span>
+          </div>
+
+          {/* Code-style content */}
+          <div className="bg-[#0a0a0a]/85 p-6 md:p-8 font-mono text-[13px] space-y-4">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="flex gap-4"
+            >
+              <span className="text-[#9C83FF]/25 select-none w-4 text-right shrink-0">1</span>
+              <p className="text-[#E1E1E1]">
+                <span className="text-[#FF9051]">const</span>{" "}
+                <span className="text-[#9C83FF]">name</span>{" "}
+                <span className="text-white">=</span>{" "}
+                <span className="text-emerald-400">"João Otávio"</span>
+                <span className="text-white">,</span>{" "}
+                <span className="text-[#9C83FF]">age</span>{" "}
+                <span className="text-white">=</span>{" "}
+                <span className="text-orange-400">20</span>
+                <span className="text-white">;</span>
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: 0.45 }}
+              viewport={{ once: true }}
+              className="flex gap-4"
+            >
+              <span className="text-[#9C83FF]/25 select-none w-4 text-right shrink-0">2</span>
+              <p className="text-[#9C83FF]/45">
+                // Specializes in intelligent automation systems using AI
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="flex gap-4"
+            >
+              <span className="text-[#9C83FF]/25 select-none w-4 text-right shrink-0">3</span>
+              <p className="text-[#E1E1E1]/75 font-inter text-[14px] max-w-[620px]">
+                I help businesses automate repetitive tasks, integrate LLMs, and build scalable
+                systems using{" "}
+                <span className="text-[#FF9051] font-mono">n8n</span>,{" "}
+                <span className="text-[#FF9051] font-mono">OpenAI</span>,{" "}
+                <span className="text-[#FF9051] font-mono">LangChain</span>, and custom APIs.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: 0.75 }}
+              viewport={{ once: true }}
+              className="flex gap-4"
+            >
+              <span className="text-[#9C83FF]/25 select-none w-4 text-right shrink-0">4</span>
+              <p className="text-[#E1E1E1]/75 font-inter text-[14px] max-w-[620px]">
+                My mission is to turn inefficiency into opportunity — constantly evolving,
+                combining code, logic, and AI to create real-world impact.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: 0.9 }}
+              viewport={{ once: true }}
+              className="flex gap-4"
+            >
+              <span className="text-[#9C83FF]/25 select-none w-4 text-right shrink-0">5</span>
+              <p>
+                <span className="text-[#FF9051]">return</span>{" "}
+                <span className="text-emerald-400">
+                  "results-driven · adaptable · obsessed with smarter &amp; faster"
+                </span>
+                <span className="text-white">;</span>
+              </p>
+            </motion.div>
+
+            <div className="flex gap-4 pt-1">
+              <span className="text-[#9C83FF]/25 select-none w-4 text-right shrink-0"> </span>
+              <p className="text-[#9C83FF]/35">
+                &gt;_ <span className="cursor-blink text-[#9C83FF]/60">█</span>
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
