@@ -53,7 +53,7 @@ export default function Projects() {
         className="flex flex-col items-center mb-12"
       >
         <span className="font-mono text-[#9C83FF]/45 text-[11px] mb-2 tracking-widest">
-          // section_04
+          // section_05
         </span>
         <h1 className="text-[42px] font-extrabold tracking-wider">PROJECTS</h1>
         <span className="tracking-[5px] text-[11px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">

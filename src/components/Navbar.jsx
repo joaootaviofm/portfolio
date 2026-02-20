@@ -6,13 +6,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 
 function Navbar() {
-  const navList = ["Home", "About", "Technologies", "Projects"];
+  const navList = ["Home", "About", "Experience", "Technologies", "Projects"];
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollTarget = (item) => {
     const map = {
       Home: "hero",
       About: "about",
+      Experience: "experience",
       Technologies: "technologies",
       Projects: "projects",
     };
@@ -23,6 +24,7 @@ function Navbar() {
     const map = {
       Home: -300,
       About: -300,
+      Experience: -300,
       Technologies: -500,
       Projects: -200,
     };

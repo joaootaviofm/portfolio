@@ -18,7 +18,7 @@ export default function Footer() {
         className="flex flex-col items-center mb-10"
       >
         <span className="font-mono text-[#9C83FF]/45 text-[11px] mb-2 tracking-widest">
-          // section_05
+          // section_06
         </span>
         <h1 className="text-[35px] md:text-[42px] font-extrabold text-white tracking-wider">
           GET IN TOUCH

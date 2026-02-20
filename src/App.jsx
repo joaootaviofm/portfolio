@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Experiences from "./components/Experiences";
 import Technologies from "./components/Technologies";
 import pattern from "./assets/background-pattern.svg";
 import Projects from "./components/Projects";
@@ -33,6 +34,7 @@ function App() {
         <Navbar />
         <Hero />
         <About />
+        <Experiences />
         <Technologies />
         <Projects />
         <Footer />
