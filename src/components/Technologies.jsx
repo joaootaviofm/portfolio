@@ -62,7 +62,7 @@ function Technologies() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: catIndex * 0.12 }}
               viewport={{ once: true }}
-              className="rounded-xl overflow-hidden border border-[#9C83FF]/18 hover:border-[#9C83FF]/40 hover:shadow-[0_0_30px_rgba(156,131,255,0.1)] transition-all duration-400 group"
+              className="flex flex-col rounded-xl overflow-hidden border border-[#9C83FF]/18 hover:border-[#9C83FF]/40 hover:shadow-[0_0_30px_rgba(156,131,255,0.1)] transition-all duration-400 group"
             >
               {/* Panel title bar */}
               <div className="px-4 py-3 bg-[#0f0f0f] border-b border-[#9C83FF]/12 flex items-center justify-between">
@@ -76,7 +76,7 @@ function Technologies() {
               </div>
 
               {/* Tech items */}
-              <div className="bg-[#0a0a0a]/85 p-5 space-y-3">
+              <div className="flex-1 bg-[#0a0a0a]/85 p-5 space-y-3">
                 {cat.items.map((tech, techIndex) => (
                   <motion.div
                     key={techIndex}

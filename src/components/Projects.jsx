@@ -71,7 +71,7 @@ export default function Projects() {
             transition={{ duration: 0.5, delay: 0.08 * index }}
             viewport={{ once: true }}
             whileHover={{ y: -4 }}
-            className={`rounded-xl overflow-hidden border border-[#9C83FF]/18 hover:border-[#9C83FF]/40 hover:shadow-[0_0_35px_rgba(156,131,255,0.12)] transition-all duration-350 ${
+            className={`flex flex-col rounded-xl overflow-hidden border border-[#9C83FF]/18 hover:border-[#9C83FF]/40 hover:shadow-[0_0_35px_rgba(156,131,255,0.12)] transition-all duration-350 ${
               index === 0 ? "lg:col-span-2" : ""
             }`}
           >
@@ -101,7 +101,7 @@ export default function Projects() {
             </div>
 
             {/* Card content */}
-            <div className="bg-[#0a0a0a]/85 p-6">
+            <div className="flex-1 bg-[#0a0a0a]/85 p-6">
               <h3 className="font-poppins font-extrabold text-[16px] md:text-[18px] mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-white/65">
                 {project.projectName}
               </h3>
