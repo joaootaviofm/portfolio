@@ -3,16 +3,17 @@ import { motion } from "motion/react";
 const techCategories = [
   {
     id: "01",
-    title: "AUTOMATIONS",
+    title: "AI SYSTEMS & AUTOMATIONS",
     accentColor: "#9C83FF",
     items: [
       { name: "N8N", detail: "workflow engine" },
       { name: "MAKE", detail: "integration platform" },
+      { name: "Kestra", detail: "Workflows orchestration" },
     ],
   },
   {
     id: "02",
-    title: "VECTOR DB & RETRIEVAL",
+    title: "AI INFRASTRUCTURE",
     accentColor: "#FF9051",
     items: [
       { name: "Pinecone", detail: "vector search" },
@@ -25,8 +26,7 @@ const techCategories = [
     title: "PROGRAMMING",
     accentColor: "#9C83FF",
     items: [
-      { name: "Python", detail: "AI frameworks" },
-      { name: "Java", detail: "backend" },
+      { name: "Python", detail: "AI & automations" },
       { name: "TypeScript", detail: "full-stack" },
     ],
   },
