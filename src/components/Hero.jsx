@@ -1,8 +1,12 @@
 import me from "../assets/me.webp";
 import { motion } from "motion/react";
 import { Link } from "react-scroll";
+import { useLanguage } from "../i18n/LanguageContext";
 
 function Hero() {
+  const { t } = useLanguage();
+  const bioLines = t("hero.bio");
+
   return (
     <div
       id="hero"
@@ -73,9 +77,9 @@ function Hero() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="font-mono text-[18px] md:text-[21px] font-medium text-[#9C83FF]/65 mt-4"
         >
-          &gt;_ AI &amp; Automation{" "}
+          &gt;_ {t("hero.role")}{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051] font-bold">
-            Specialist
+            {t("hero.roleHighlight")}
           </span>
           <span className="cursor-blink text-[#FF9051] ml-0.5">|</span>
         </motion.p>
@@ -87,22 +91,12 @@ function Hero() {
           transition={{ duration: 0.5, delay: 0.9 }}
           className="mt-7 max-w-[660px] text-center font-mono text-[12px] md:text-[13px] text-[#555] space-y-1"
         >
-          <p>
-            <span className="text-[#9C83FF]/40">// </span>
-            I design and build AI-powered automations that save time,
-          </p>
-          <p>
-            <span className="text-[#9C83FF]/40">// </span>
-            boost efficiency, and scale operations.
-          </p>
-          <p className="mt-2">
-            <span className="text-[#9C83FF]/40">// </span>
-            From smart workflows to LLM-integrated systems —
-          </p>
-          <p>
-            <span className="text-[#9C83FF]/40">// </span>
-            code + creativity = real business impact.
-          </p>
+          {bioLines.map((line, i) => (
+            <p key={i} className={i === 2 ? "mt-2" : ""}>
+              <span className="text-[#9C83FF]/40">// </span>
+              {line}
+            </p>
+          ))}
         </motion.div>
 
         {/* CTA buttons */}

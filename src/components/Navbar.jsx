@@ -4,32 +4,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import { useLanguage } from "../i18n/LanguageContext";
+import LanguageToggle from "./LanguageToggle";
+
+const navItems = [
+  { id: "hero", offset: -300 },
+  { id: "about", offset: -300 },
+  { id: "experience", offset: -300 },
+  { id: "technologies", offset: -500 },
+  { id: "projects", offset: -200 },
+];
 
 function Navbar() {
-  const navList = ["Home", "About", "Experience", "Technologies", "Projects"];
   const [isOpen, setIsOpen] = useState(false);
-
-  const scrollTarget = (item) => {
-    const map = {
-      Home: "hero",
-      About: "about",
-      Experience: "experience",
-      Technologies: "technologies",
-      Projects: "projects",
-    };
-    return map[item] || "";
-  };
-
-  const scrollOffset = (item) => {
-    const map = {
-      Home: -300,
-      About: -300,
-      Experience: -300,
-      Technologies: -500,
-      Projects: -200,
-    };
-    return map[item] ?? null;
-  };
+  const { t } = useLanguage();
+  const navLabels = t("nav.items");
 
   return (
     <nav className="fixed z-50 w-full top-0 flex justify-between items-center px-6 md:px-20 py-4 bg-black/85 backdrop-blur-xl border-b border-[#9C83FF]/20 shadow-[0_0_30px_rgba(156,131,255,0.06)]">
@@ -47,24 +36,24 @@ function Navbar() {
 
       {/* Desktop nav links */}
       <ul className="hidden md:flex items-center gap-1 font-mono text-sm">
-        {navList.map((item, index) => (
-          <li key={index}>
+        {navItems.map((item, index) => (
+          <li key={item.id}>
             <motion.div
               initial={{ opacity: 0, y: -16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.08 * index }}
             >
               <Link
-                to={scrollTarget(item)}
+                to={item.id}
                 smooth={true}
                 duration={700}
-                offset={scrollOffset(item)}
+                offset={item.offset}
                 className="group relative px-4 py-2 cursor-pointer text-[#9C83FF]/55 hover:text-white transition-all duration-300 block"
               >
                 <span className="opacity-0 group-hover:opacity-100 text-[#FF9051] transition-opacity duration-200 absolute left-1 top-1/2 -translate-y-1/2 text-xs leading-none">
                   [
                 </span>
-                {item}
+                {navLabels[index]}
                 <span className="opacity-0 group-hover:opacity-100 text-[#FF9051] transition-opacity duration-200 absolute right-1 top-1/2 -translate-y-1/2 text-xs leading-none">
                   ]
                 </span>
@@ -75,8 +64,15 @@ function Navbar() {
         ))}
       </ul>
 
-      {/* Contact button */}
-      <div className="hidden md:flex">
+      {/* Language toggle + Contact button */}
+      <div className="hidden md:flex items-center gap-3">
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <LanguageToggle />
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -107,18 +103,18 @@ function Navbar() {
               transition={{ duration: 0.25 }}
               className="absolute top-full left-0 w-full bg-[#0a0a0a]/96 backdrop-blur-xl border-b border-[#9C83FF]/20 py-3 font-mono"
             >
-              {navList.map((item, index) => (
-                <li key={index}>
+              {navItems.map((item, index) => (
+                <li key={item.id}>
                   <Link
                     onClick={() => setIsOpen(false)}
-                    to={scrollTarget(item)}
+                    to={item.id}
                     smooth={true}
                     duration={700}
-                    offset={scrollOffset(item)}
+                    offset={item.offset}
                     className="flex items-center gap-3 px-8 py-3 text-[#9C83FF]/65 hover:text-white hover:bg-[#9C83FF]/8 transition-all duration-200 cursor-pointer text-sm"
                   >
                     <span className="text-[#FF9051] text-xs">&gt;</span>
-                    {item}
+                    {navLabels[index]}
                   </Link>
                 </li>
               ))}
@@ -131,8 +127,11 @@ function Navbar() {
                   className="flex items-center gap-3 px-8 py-3 text-[#9C83FF]/65 hover:text-white hover:bg-[#9C83FF]/8 transition-all duration-200 cursor-pointer text-sm"
                 >
                   <span className="text-[#FF9051] text-xs">&gt;</span>
-                  Contact
+                  {t("nav.contact")}
                 </Link>
+              </li>
+              <li className="px-8 py-3">
+                <LanguageToggle />
               </li>
             </motion.ul>
           )}

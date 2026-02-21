@@ -1,38 +1,48 @@
 import { motion } from "motion/react";
+import { useLanguage } from "../i18n/LanguageContext";
 
-const techCategories = [
+const techMeta = [
   {
     id: "01",
-    title: "AI SYSTEMS & AUTOMATIONS",
     accentColor: "#9C83FF",
     items: [
-      { name: "N8N", detail: "workflow engine" },
-      { name: "MAKE", detail: "integration platform" },
-      { name: "Kestra", detail: "Workflows orchestration" },
+      { name: "N8N" },
+      { name: "MAKE" },
+      { name: "Kestra" },
     ],
   },
   {
     id: "02",
-    title: "AI INFRASTRUCTURE",
     accentColor: "#FF9051",
     items: [
-      { name: "Pinecone", detail: "vector search" },
-      { name: "Supabase", detail: "postgres + pgvector" },
-      { name: "Redis", detail: "in-memory cache" },
+      { name: "Pinecone" },
+      { name: "Supabase" },
+      { name: "Redis" },
     ],
   },
   {
     id: "03",
-    title: "PROGRAMMING",
     accentColor: "#9C83FF",
     items: [
-      { name: "Python", detail: "AI & automations" },
-      { name: "TypeScript", detail: "full-stack" },
+      { name: "Python" },
+      { name: "TypeScript" },
     ],
   },
 ];
 
 function Technologies() {
+  const { t } = useLanguage();
+  const translatedCategories = t("technologies.categories");
+
+  const techCategories = techMeta.map((meta, i) => ({
+    ...meta,
+    title: translatedCategories[i].title,
+    items: meta.items.map((item, j) => ({
+      ...item,
+      detail: translatedCategories[i].items[j].detail,
+    })),
+  }));
+
   return (
     <div id="technologies" className="relative text-white mt-[150px] pb-5 px-4">
       <div className="flex flex-col justify-center items-center">
@@ -47,9 +57,9 @@ function Technologies() {
           <span className="font-mono text-[#9C83FF]/45 text-[11px] mb-2 tracking-widest">
             // section_04
           </span>
-          <h1 className="font-extrabold text-[42px] tracking-wider">TECHNOLOGIES</h1>
+          <h1 className="font-extrabold text-[42px] tracking-wider">{t("technologies.title")}</h1>
           <span className="tracking-[5px] text-[11px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
-            MY CURRENT STACK FOR AI &amp; AUTOMATIONS
+            {t("technologies.subtitle")}
           </span>
         </motion.div>
 

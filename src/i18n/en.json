@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "items": ["Home", "About", "Experience", "Technologies", "Projects"],
+    "contact": "Contact"
+  },
+  "hero": {
+    "role": "AI & Automation",
+    "roleHighlight": "Specialist",
+    "bio": [
+      "I design and build AI-powered automations that save time,",
+      "boost efficiency, and scale operations.",
+      "From smart workflows to LLM-integrated systems —",
+      "code + creativity = real business impact."
+    ]
+  },
+  "about": {
+    "title": "ABOUT ME",
+    "subtitle": "LEARN MORE",
+    "comment": "// Specializes in intelligent automation systems using AI",
+    "line3": "I help businesses automate repetitive tasks, integrate LLMs, and build scalable systems using",
+    "line4": "My mission is to turn inefficiency into opportunity — constantly evolving, combining code, logic, and AI to create real-world impact.",
+    "returnValue": "results-driven · adaptable · obsessed with smarter & faster"
+  },
+  "experiences": {
+    "title": "EXPERIENCE",
+    "subtitle": "WORK HISTORY",
+    "items": [
+      {
+        "role": "AI & Automation Specialist",
+        "period": "Jun 2025 – Present",
+        "status": "CURRENT",
+        "highlights": [
+          {
+            "category": "AI Process Automation",
+            "points": [
+              "Designed and deployed AI-driven workflows to automate repetitive operational tasks",
+              "Integrated LLMs into real business processes and built scalable internal systems"
+            ]
+          },
+          {
+            "category": "AI Quality Control",
+            "points": [
+              "Developed AI-assisted evaluation systems for creative deliverables",
+              "Structured automated feedback flows based on client briefs"
+            ]
+          },
+          {
+            "category": "Cross-Dept Optimization",
+            "points": [
+              "Implemented automation solutions across multiple internal teams",
+              "Converted process bottlenecks into AI-driven improvements"
+            ]
+          },
+          {
+            "category": "Data & Reporting",
+            "points": [
+              "Designed automated reporting systems for internal performance tracking",
+              "Built data pipelines for aggregating and processing operational KPIs"
+            ]
+          },
+          {
+            "category": "Architecture & Systems Thinking",
+            "points": [
+              "Designed automation architectures with reliability, scalability, and performance constraints in mind",
+              "Applied systems-level thinking to ensure long-term operational stability"
+            ]
+          },
+          {
+            "category": "Backend & Data Depth",
+            "points": [
+              "Built complex, multi-step data pipelines with robust error handling and retry logic",
+              "Structured backend workflows for resilience, consistency, and operational predictability"
+            ]
+          },
+          {
+            "category": "Strategic AI Leadership",
+            "points": [
+              "Identified AI integration opportunities across departments and defined standardized intake processes",
+              "Drove the adoption of AI-first workflows, establishing repeatable patterns for future automation"
+            ]
+          },
+          {
+            "category": "Impact",
+            "points": [
+              "Reduced manual workload and improved throughput across internal operations",
+              "Strengthened process consistency through intelligent validation and scalable automation design"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "technologies": {
+    "title": "TECHNOLOGIES",
+    "subtitle": "MY CURRENT STACK FOR AI & AUTOMATIONS",
+    "categories": [
+      {
+        "title": "AI SYSTEMS & AUTOMATIONS",
+        "items": [
+          { "detail": "workflow engine" },
+          { "detail": "integration platform" },
+          { "detail": "workflows orchestration" }
+        ]
+      },
+      {
+        "title": "AI INFRASTRUCTURE",
+        "items": [
+          { "detail": "vector search" },
+          { "detail": "postgres + pgvector" },
+          { "detail": "in-memory cache" }
+        ]
+      },
+      {
+        "title": "PROGRAMMING",
+        "items": [
+          { "detail": "AI & automations" },
+          { "detail": "full-stack" }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "PROJECTS",
+    "subtitle": "REAL AND IN-PROGRESS SYSTEMS",
+    "items": [
+      {
+        "projectName": "Business Process Automation Suite",
+        "description": "Modular suite of advanced automations for business operations:\n\n→ Employee Onboarding — auto-creates accounts, assigns tasks, notifies IT\n→ Financial Reconciliation Bot — AI-powered ERP cross-check, flags discrepancies\n→ Customer Support Escalation — sentiment analysis, auto-assigns via Slack/WhatsApp\n→ Executive Summary Generator — daily KPI reports via OpenAI → Notion/Drive\n\nSecurity: PostgreSQL/Supabase audit logs, retry logic, GDPR/LGPD compliant"
+      },
+      {
+        "projectName": "Ecommerce Automation Suite",
+        "description": "Comprehensive automation for ecommerce:\n\n→ RAG 24/7 AI Support integrated with product catalog\n→ Cart Recovery — abandoned cart detection + personalized email sequences\n→ AI Upsell & Follow-up — tailored product recommendations\n→ Weekly Insights — automated buyer analytics and sales reports"
+      },
+      {
+        "projectName": "BarberBot 24/7 Smart Assistant",
+        "description": "AI-powered WhatsApp assistant for barbershops:\n\n→ Automates customer service, FAQs, and appointment booking\n→ Sends reminders, operates 24/7 without manual input\n→ Integrated with Google Calendar and scheduling spreadsheets"
+      },
+      {
+        "projectName": "Restaurant Ordering Bot",
+        "description": "AI-driven WhatsApp ordering system:\n\n→ Customers order via WhatsApp with instant confirmation\n→ Real-time tracking via Google Sheets or POS integration\n→ Reduces errors, minimizes phone traffic, improves UX"
+      },
+      {
+        "projectName": "Real Estate Lead Qualifier",
+        "description": "AI assistant for real estate agencies:\n\n→ Qualifies leads via WhatsApp or web chat\n→ Auto-updates CRM with buyer/renter preferences\n→ Schedules viewings and follow-ups automatically"
+      }
+    ]
+  },
+  "footer": {
+    "title": "GET IN TOUCH",
+    "subtitle": "MY CONTACTS",
+    "copyright": "© 2026 João Otávio · Built with React + Framer Motion"
+  }
+}

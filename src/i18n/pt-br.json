@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "items": ["Início", "Sobre", "Experiência", "Tecnologias", "Projetos"],
+    "contact": "Contato"
+  },
+  "hero": {
+    "role": "Especialista em IA",
+    "roleHighlight": "& Automação",
+    "bio": [
+      "Eu projeto e construo automações com IA que economizam tempo,",
+      "aumentam a eficiência e escalam operações.",
+      "De workflows inteligentes a sistemas integrados com LLMs —",
+      "código + criatividade = impacto real nos negócios."
+    ]
+  },
+  "about": {
+    "title": "SOBRE MIM",
+    "subtitle": "SAIBA MAIS",
+    "comment": "// Especializado em sistemas de automação inteligente com IA",
+    "line3": "Ajudo empresas a automatizar tarefas repetitivas, integrar LLMs e construir sistemas escaláveis usando",
+    "line4": "Minha missão é transformar ineficiência em oportunidade — evoluindo constantemente, combinando código, lógica e IA para criar impacto real.",
+    "returnValue": "focado em resultados · adaptável · obcecado por mais inteligente & rápido"
+  },
+  "experiences": {
+    "title": "EXPERIÊNCIA",
+    "subtitle": "HISTÓRICO PROFISSIONAL",
+    "items": [
+      {
+        "role": "Especialista em IA & Automação",
+        "period": "Jun 2025 – Presente",
+        "status": "ATUAL",
+        "highlights": [
+          {
+            "category": "Automação de Processos com IA",
+            "points": [
+              "Projetei e implantei workflows com IA para automatizar tarefas operacionais repetitivas",
+              "Integrei LLMs em processos reais de negócio e construí sistemas internos escaláveis"
+            ]
+          },
+          {
+            "category": "Controle de Qualidade com IA",
+            "points": [
+              "Desenvolvi sistemas de avaliação assistidos por IA para entregas criativas",
+              "Estruturei fluxos de feedback automatizados baseados em briefings de clientes"
+            ]
+          },
+          {
+            "category": "Otimização Interdepartamental",
+            "points": [
+              "Implementei soluções de automação em múltiplas equipes internas",
+              "Converti gargalos de processos em melhorias impulsionadas por IA"
+            ]
+          },
+          {
+            "category": "Dados & Relatórios",
+            "points": [
+              "Projetei sistemas de relatórios automatizados para acompanhamento de performance interna",
+              "Construí pipelines de dados para agregação e processamento de KPIs operacionais"
+            ]
+          },
+          {
+            "category": "Arquitetura & Pensamento Sistêmico",
+            "points": [
+              "Projetei arquiteturas de automação com foco em confiabilidade, escalabilidade e performance",
+              "Apliquei pensamento sistêmico para garantir estabilidade operacional a longo prazo"
+            ]
+          },
+          {
+            "category": "Backend & Profundidade em Dados",
+            "points": [
+              "Construí pipelines de dados complexos e multi-etapas com tratamento robusto de erros e lógica de retry",
+              "Estruturei workflows de backend para resiliência, consistência e previsibilidade operacional"
+            ]
+          },
+          {
+            "category": "Liderança Estratégica em IA",
+            "points": [
+              "Identifiquei oportunidades de integração de IA entre departamentos e defini processos padronizados",
+              "Impulsionei a adoção de workflows AI-first, estabelecendo padrões repetíveis para automação futura"
+            ]
+          },
+          {
+            "category": "Impacto",
+            "points": [
+              "Reduzi a carga de trabalho manual e melhorei o throughput das operações internas",
+              "Fortaleci a consistência dos processos através de validação inteligente e design de automação escalável"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "technologies": {
+    "title": "TECNOLOGIAS",
+    "subtitle": "MEU STACK ATUAL PARA IA & AUTOMAÇÕES",
+    "categories": [
+      {
+        "title": "SISTEMAS DE IA & AUTOMAÇÕES",
+        "items": [
+          { "detail": "motor de workflows" },
+          { "detail": "plataforma de integração" },
+          { "detail": "orquestração de workflows" }
+        ]
+      },
+      {
+        "title": "INFRAESTRUTURA DE IA",
+        "items": [
+          { "detail": "busca vetorial" },
+          { "detail": "postgres + pgvector" },
+          { "detail": "cache em memória" }
+        ]
+      },
+      {
+        "title": "PROGRAMAÇÃO",
+        "items": [
+          { "detail": "IA & automações" },
+          { "detail": "full-stack" }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "PROJETOS",
+    "subtitle": "SISTEMAS REAIS E EM DESENVOLVIMENTO",
+    "items": [
+      {
+        "projectName": "Suite de Automação de Processos",
+        "description": "Suite modular de automações avançadas para operações empresariais:\n\n→ Onboarding de Funcionários — cria contas automaticamente, atribui tarefas, notifica TI\n→ Bot de Reconciliação Financeira — verificação cruzada de ERP com IA, sinaliza discrepâncias\n→ Escalação de Suporte ao Cliente — análise de sentimento, atribuição automática via Slack/WhatsApp\n→ Gerador de Resumo Executivo — relatórios diários de KPI via OpenAI → Notion/Drive\n\nSegurança: logs de auditoria PostgreSQL/Supabase, lógica de retry, compatível com GDPR/LGPD"
+      },
+      {
+        "projectName": "Suite de Automação para E-commerce",
+        "description": "Automação completa para e-commerce:\n\n→ Suporte IA 24/7 com RAG integrado ao catálogo de produtos\n→ Recuperação de Carrinho — detecção de carrinho abandonado + sequências de email personalizadas\n→ Upsell & Follow-up com IA — recomendações de produtos sob medida\n→ Insights Semanais — análise de compradores e relatórios de vendas automatizados"
+      },
+      {
+        "projectName": "BarberBot Assistente 24/7",
+        "description": "Assistente IA via WhatsApp para barbearias:\n\n→ Automatiza atendimento ao cliente, FAQs e agendamento\n→ Envia lembretes, opera 24/7 sem intervenção manual\n→ Integrado com Google Calendar e planilhas de agendamento"
+      },
+      {
+        "projectName": "Bot de Pedidos para Restaurantes",
+        "description": "Sistema de pedidos via WhatsApp com IA:\n\n→ Clientes fazem pedidos via WhatsApp com confirmação instantânea\n→ Rastreamento em tempo real via Google Sheets ou integração com POS\n→ Reduz erros, minimiza tráfego telefônico, melhora a experiência"
+      },
+      {
+        "projectName": "Qualificador de Leads Imobiliários",
+        "description": "Assistente IA para imobiliárias:\n\n→ Qualifica leads via WhatsApp ou chat web\n→ Atualiza CRM automaticamente com preferências de compradores/locatários\n→ Agenda visitas e follow-ups automaticamente"
+      }
+    ]
+  },
+  "footer": {
+    "title": "ENTRE EM CONTATO",
+    "subtitle": "MEUS CONTATOS",
+    "copyright": "© 2026 João Otávio · Feito com React + Framer Motion"
+  }
+}

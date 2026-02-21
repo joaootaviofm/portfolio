@@ -1,6 +1,9 @@
 import { motion } from "motion/react";
+import { useLanguage } from "../i18n/LanguageContext";
 
 function About() {
+  const { t } = useLanguage();
+
   return (
     <div className="mt-[150px] z-10 relative pb-7 px-4">
       <div id="about" className="flex flex-col items-center justify-center">
@@ -15,9 +18,9 @@ function About() {
           <span className="font-mono text-[#9C83FF]/45 text-[11px] mb-2 tracking-widest">
             // section_02
           </span>
-          <h1 className="font-extrabold text-white text-[42px] tracking-wider">ABOUT ME</h1>
+          <h1 className="font-extrabold text-white text-[42px] tracking-wider">{t("about.title")}</h1>
           <span className="tracking-[5px] text-[11px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
-            LEARN MORE
+            {t("about.subtitle")}
           </span>
         </motion.div>
 
@@ -69,7 +72,7 @@ function About() {
             >
               <span className="text-[#9C83FF]/25 select-none w-4 text-right shrink-0">2</span>
               <p className="text-[#9C83FF]/45">
-                // Specializes in intelligent automation systems using AI
+                {t("about.comment")}
               </p>
             </motion.div>
 
@@ -82,8 +85,7 @@ function About() {
             >
               <span className="text-[#9C83FF]/25 select-none w-4 text-right shrink-0">3</span>
               <p className="text-[#E1E1E1]/75 font-inter text-[14px] max-w-[620px]">
-                I help businesses automate repetitive tasks, integrate LLMs, and build scalable
-                systems using{" "}
+                {t("about.line3")}{" "}
                 <span className="text-[#FF9051] font-mono">n8n</span>,{" "}
                 <span className="text-[#FF9051] font-mono">OpenAI</span>,{" "}
                 <span className="text-[#FF9051] font-mono">LangChain</span>, and custom APIs.
@@ -99,8 +101,7 @@ function About() {
             >
               <span className="text-[#9C83FF]/25 select-none w-4 text-right shrink-0">4</span>
               <p className="text-[#E1E1E1]/75 font-inter text-[14px] max-w-[620px]">
-                My mission is to turn inefficiency into opportunity — constantly evolving,
-                combining code, logic, and AI to create real-world impact.
+                {t("about.line4")}
               </p>
             </motion.div>
 
@@ -115,7 +116,7 @@ function About() {
               <p>
                 <span className="text-[#FF9051]">return</span>{" "}
                 <span className="text-emerald-400">
-                  "results-driven · adaptable · obsessed with smarter &amp; faster"
+                  "{t("about.returnValue")}"
                 </span>
                 <span className="text-white">;</span>
               </p>

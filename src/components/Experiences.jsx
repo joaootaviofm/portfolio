@@ -1,74 +1,22 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../i18n/LanguageContext";
+
+const experiencesMeta = [
+  {
+    id: "0x01",
+    company: "Deer Designer",
+    companyUrl: "https://www.linkedin.com/company/deerdesigner",
+  },
+];
 
 export default function Experiences() {
-  const experiences = [
-    {
-      id: "0x01",
-      status: "CURRENT",
-      company: "Deer Designer",
-      companyUrl: "https://www.linkedin.com/company/deerdesigner",
-      role: "AI & Automation Specialist",
-      period: "Jun 2025 – Present",
-      highlights: [
-        {
-          category: "AI Process Automation",
-          points: [
-            "Designed and deployed AI-driven workflows to automate repetitive operational tasks",
-            "Integrated LLMs into real business processes and built scalable internal systems",
-          ],
-        },
-        {
-          category: "AI Quality Control",
-          points: [
-            "Developed AI-assisted evaluation systems for creative deliverables",
-            "Structured automated feedback flows based on client briefs",
-          ],
-        },
-        {
-          category: "Cross-Dept Optimization",
-          points: [
-            "Implemented automation solutions across multiple internal teams",
-            "Converted process bottlenecks into AI-driven improvements",
-          ],
-        },
-        {
-          category: "Data & Reporting",
-          points: [
-            "Designed automated reporting systems for internal performance tracking",
-            "Built data pipelines for aggregating and processing operational KPIs",
-          ],
-        },
-        {
-          category: "Architecture & Systems Thinking",
-          points: [
-            "Designed automation architectures with reliability, scalability, and performance constraints in mind",
-            "Applied systems-level thinking to ensure long-term operational stability",
-          ],
-        },
-        {
-          category: "Backend & Data Depth",
-          points: [
-            "Built complex, multi-step data pipelines with robust error handling and retry logic",
-            "Structured backend workflows for resilience, consistency, and operational predictability",
-          ],
-        },
-        {
-          category: "Strategic AI Leadership",
-          points: [
-            "Identified AI integration opportunities across departments and defined standardized intake processes",
-            "Drove the adoption of AI-first workflows, establishing repeatable patterns for future automation",
-          ],
-        },
-        {
-          category: "Impact",
-          points: [
-            "Reduced manual workload and improved throughput across internal operations",
-            "Strengthened process consistency through intelligent validation and scalable automation design",
-          ],
-        },
-      ],
-    },
-  ];
+  const { t } = useLanguage();
+  const translatedItems = t("experiences.items");
+
+  const experiences = experiencesMeta.map((meta, i) => ({
+    ...meta,
+    ...translatedItems[i],
+  }));
 
   return (
     <div
@@ -86,9 +34,9 @@ export default function Experiences() {
         <span className="font-mono text-[#9C83FF]/45 text-[11px] mb-2 tracking-widest">
           // section_03
         </span>
-        <h1 className="text-[42px] font-extrabold tracking-wider">EXPERIENCE</h1>
+        <h1 className="text-[42px] font-extrabold tracking-wider">{t("experiences.title")}</h1>
         <span className="tracking-[5px] text-[11px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
-          WORK HISTORY
+          {t("experiences.subtitle")}
         </span>
       </motion.div>
 

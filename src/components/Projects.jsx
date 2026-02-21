@@ -1,38 +1,22 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../i18n/LanguageContext";
+
+const projectsMeta = [
+  { id: "0x01", status: "IN_DEV" },
+  { id: "0x02", status: "ACTIVE" },
+  { id: "0x03", status: "ACTIVE" },
+  { id: "0x04", status: "ACTIVE" },
+  { id: "0x05", status: "ACTIVE" },
+];
 
 export default function Projects() {
-  const projects = [
-    {
-      id: "0x01",
-      status: "IN_DEV",
-      projectName: "Business Process Automation Suite",
-      description: `Modular suite of advanced automations for business operations:\n\n→ Employee Onboarding — auto-creates accounts, assigns tasks, notifies IT\n→ Financial Reconciliation Bot — AI-powered ERP cross-check, flags discrepancies\n→ Customer Support Escalation — sentiment analysis, auto-assigns via Slack/WhatsApp\n→ Executive Summary Generator — daily KPI reports via OpenAI → Notion/Drive\n\nSecurity: PostgreSQL/Supabase audit logs, retry logic, GDPR/LGPD compliant`,
-    },
-    {
-      id: "0x02",
-      status: "ACTIVE",
-      projectName: "Ecommerce Automation Suite",
-      description: `Comprehensive automation for ecommerce:\n\n→ RAG 24/7 AI Support integrated with product catalog\n→ Cart Recovery — abandoned cart detection + personalized email sequences\n→ AI Upsell & Follow-up — tailored product recommendations\n→ Weekly Insights — automated buyer analytics and sales reports`,
-    },
-    {
-      id: "0x03",
-      status: "ACTIVE",
-      projectName: "BarberBot 24/7 Smart Assistant",
-      description: `AI-powered WhatsApp assistant for barbershops:\n\n→ Automates customer service, FAQs, and appointment booking\n→ Sends reminders, operates 24/7 without manual input\n→ Integrated with Google Calendar and scheduling spreadsheets`,
-    },
-    {
-      id: "0x04",
-      status: "ACTIVE",
-      projectName: "Restaurant Ordering Bot",
-      description: `AI-driven WhatsApp ordering system:\n\n→ Customers order via WhatsApp with instant confirmation\n→ Real-time tracking via Google Sheets or POS integration\n→ Reduces errors, minimizes phone traffic, improves UX`,
-    },
-    {
-      id: "0x05",
-      status: "ACTIVE",
-      projectName: "Real Estate Lead Qualifier",
-      description: `AI assistant for real estate agencies:\n\n→ Qualifies leads via WhatsApp or web chat\n→ Auto-updates CRM with buyer/renter preferences\n→ Schedules viewings and follow-ups automatically`,
-    },
-  ];
+  const { t } = useLanguage();
+  const translatedItems = t("projects.items");
+
+  const projects = projectsMeta.map((meta, i) => ({
+    ...meta,
+    ...translatedItems[i],
+  }));
 
   const statusStyle = (status) =>
     status === "IN_DEV"
@@ -55,9 +39,9 @@ export default function Projects() {
         <span className="font-mono text-[#9C83FF]/45 text-[11px] mb-2 tracking-widest">
           // section_05
         </span>
-        <h1 className="text-[42px] font-extrabold tracking-wider">PROJECTS</h1>
+        <h1 className="text-[42px] font-extrabold tracking-wider">{t("projects.title")}</h1>
         <span className="tracking-[5px] text-[11px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
-          REAL AND IN-PROGRESS SYSTEMS
+          {t("projects.subtitle")}
         </span>
       </motion.div>
 

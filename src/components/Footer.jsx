@@ -2,8 +2,11 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { motion } from "framer-motion";
+import { useLanguage } from "../i18n/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <div
       id="contact"
@@ -21,10 +24,10 @@ export default function Footer() {
           // section_06
         </span>
         <h1 className="text-[35px] md:text-[42px] font-extrabold text-white tracking-wider">
-          GET IN TOUCH
+          {t("footer.title")}
         </h1>
         <span className="tracking-[5px] text-[11px] text-transparent bg-clip-text bg-gradient-to-r from-[#9C83FF] to-[#FF9051]">
-          MY CONTACTS
+          {t("footer.subtitle")}
         </span>
       </motion.div>
 
@@ -116,7 +119,7 @@ export default function Footer() {
         viewport={{ once: true }}
         className="font-mono text-[11px] text-[#9C83FF]/18 mt-8"
       >
-        © 2026 João Otávio · Built with React + Framer Motion
+        {t("footer.copyright")}
       </motion.p>
     </div>
   );
